@@ -1,0 +1,22 @@
+# IDEs
+.idea
+*.iml
+
+# Maven
+**/target/
+**/.mvn/wrapper/maven-wrapper.jar
+
+# Documentation
+/email/HELP.md
+/user/HELP.md
+
+# Environment
+.env
+.env.*
+
+# Logs
+*.log
+logs/
+*.tmp
+*.swp
+*.bak
