@@ -3,8 +3,8 @@ CREATE TABLE tb_email (
     user_id UUID,
     email_from VARCHAR(255),
     email_to VARCHAR(255),
-    email_subject VARCHAR(255),
+    subject VARCHAR(255),
     body TEXT,
-    send_date_email TIMESTAMP,
-    status_email VARCHAR(50)
+    send_date TIMESTAMP,
+    status VARCHAR(50)
 );
