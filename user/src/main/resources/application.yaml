@@ -1,25 +1,26 @@
 spring:
   application:
     name: user
+
   datasource:
-    url: jdbc:postgresql://localhost:5433/ms_email_ms
-    username: postgres
-    password: postgres
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
     driver-class-name: org.postgresql.Driver
 
   jpa:
     hibernate:
-    ddl-auto: update
+      ddl-auto: update
     show-sql: true
     properties:
       hibernate:
-      dialect: org.hibernate.dialect.PostgreSQLDialect
+        dialect: org.hibernate.dialect.PostgreSQLDialect
 
   rabbitmq:
-    addresses: amqps://duck.lmq.cloudamqp.com
+    addresses: ${RABBITMQ_ADDRESS}
     username: ${RABBITMQ_USERNAME}
     password: ${RABBITMQ_PASSWORD}
-    virtual-host: pofhowkh
+    virtual-host: ${RABBITMQ_VHOST}
 
   flyway:
     enabled: true
@@ -33,10 +34,10 @@ spring:
     password: ${EMAIL_PASSWORD}
     properties:
       mail:
-      smtp:
-      auth: true
-      starttls:
-      enable: true
+        smtp:
+          auth: true
+          starttls:
+            enable: true
 
 server:
-  port: 8080
+  port: 8081
