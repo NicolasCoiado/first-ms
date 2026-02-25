@@ -1,0 +1,14 @@
+package dev.coiado.user.dto.response;
+
+import dev.coiado.user.enums.UserRoles;
+
+import java.util.UUID;
+
+public record UserResponseDto (
+        UUID id,
+        String username,
+        String email,
+        boolean accountLocked,
+        UserRoles userRoles,
+        boolean emailVerified
+){}
